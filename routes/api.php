@@ -21,6 +21,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 // Route::post('add', 'App\Http\Controllers\CaculatorController@add');
 
 Route::post('add', [CalculatorController::class, 'add']);
-// Route::post('subtract', CalculatorController::class, 'subtract');
-// Route::post('multiply', CalculatorController::class, 'multiply');
-// Route::post('division', CalculatorController::class, 'division');
+Route::post('subtract', [CalculatorController::class, 'subtract']);
+Route::post('multiply', [CalculatorController::class, 'multiply']);
+Route::post('division', [CalculatorController::class, 'division']);
